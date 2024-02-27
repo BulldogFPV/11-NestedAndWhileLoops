@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# Done: 1. (3 pts)
 #
 #   For this _TODO_, write function called count() that takes one parameter:
 #       number  <-- int
@@ -24,9 +24,14 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def count(number):
+    x = 1
+    while x <= number:
+        print(x)
+        x += 1
+count(8)
 ###############################################################################
-# TODO: 2. (5 pts)
+# Done: 2. (5 pts)
 #
 #   For this _TODO_, write a function called adder() that will continually ask the use to enter a number (using user input) like so:
 #
@@ -48,9 +53,17 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+#def adder():
+#    total = 0
+#    while True:
+#        number = float(input("Please Enter a Number: "))
+#        if number == 0:
+#            print(f"The sum is {total}.")
+#            break
+#        total += number
+#adder()
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (3 pts)
+# Done: 3. EXTRA CREDIT (3 pts)
 #
 #   DO NOT attempt this extra credit until you have completed m3!!!
 #   
@@ -64,3 +77,15 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def adder():
+    total = 0
+    while True:
+        try:
+            number = float(input("Please Enter a Number: "))
+            if number == 0:
+                print(f"The sum is {total}.")
+                break
+            total += number
+        except ValueError:
+            print("Invalid Input! Please enter a valid number.")
+adder()
